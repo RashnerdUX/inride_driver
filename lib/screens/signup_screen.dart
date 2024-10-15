@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:inride_driver/theme/spacer.dart';
+import 'package:inride_driver/widgets/widgets_barrel.dart';
+
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            size: 24,
+          ),
+        ),
+      ),
+      body: SafeArea(
+          child: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 32),
+          child: Column(
+            children: [
+              const CustomOnboardingHeader(),
+              Space.h(8),
+              const CustomSignupForm(),
+            ],
+          ),
+        ),
+      )),
+    );
+  }
+}

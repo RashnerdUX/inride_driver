@@ -23,7 +23,7 @@ class SigninScreen extends StatelessWidget {
           children: [
             const CustomOnboardingHeader(),
             Space.h(8),
-            const CustomForm(),
+            const CustomSignInForm(),
             Space.h(46),
             const CustomAltSignInOptions(),
           ],

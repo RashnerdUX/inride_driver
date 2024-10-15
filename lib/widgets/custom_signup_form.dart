@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
-//THis is the form for sign up
+//This is the form for sign up
 class CustomSignupForm extends StatelessWidget {
   const CustomSignupForm({super.key});
 
@@ -35,22 +35,6 @@ class CustomSignupForm extends StatelessWidget {
         const CustomFilledButton(
           label: "Register",
         ),
-      ],
-    );
-  }
-}
-
-class CustomDriverSignup extends StatelessWidget {
-  const CustomDriverSignup({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text("Driver's License"),
-        Row(
-          children: [],
-        )
       ],
     );
   }

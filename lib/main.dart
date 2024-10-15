@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         designSize: const Size(932, 430),
         minTextAdapt: true,
         builder: (context, child) => MaterialApp(
+          debugShowCheckedModeBanner: false,
           // localizationsDelegates: [
           //   GlobalMaterialLocalizations.delegate,
           // ],
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           theme: AppTheme.themeData,
           //darkTheme: AppTheme.darkThemeData,
           themeMode: ThemeMode.system,
-          home: const SignupScreen(),
+          home: const EnableLocationScreen(),
         ),
       ),
     );
