@@ -1,39 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
-class CustomFilledButton extends StatelessWidget {
-  const CustomFilledButton({
+class CustomOutlinedButton extends StatelessWidget {
+  const CustomOutlinedButton({
     super.key,
     required this.label,
-    this.function,
+    this.color,
     this.width,
   });
 
-  //The label of the button
+  //This is the label for the outlined button
   final String label;
 
-  //The function of the button
-  final Function? function;
+  //This is the color of the outline border
+  final Color? color;
 
-  //This specifies the width of the widget
+  //This specifies the width of the button
   final double? width;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
+    return TextButton(
       onPressed: () {},
       child: Container(
         width: width ?? double.infinity,
         height: 50,
         alignment: Alignment.center,
-        decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            color: Palette.backgroundColor),
+        decoration: BoxDecoration(
+          border: Border.all(width: 2, color: Palette.accentTextColor),
+          borderRadius: BorderRadius.circular(8),
+        ),
         child: Text(
           label,
           style: const TextStyle(
-            color: Colors.white,
-            fontSize: 16,
+            color: Palette.accentTextColor,
+            fontSize: 18,
             fontWeight: FontWeight.w700,
           ),
         ),

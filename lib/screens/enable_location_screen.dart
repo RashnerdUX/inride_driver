@@ -52,26 +52,8 @@ class EnableLocationScreen extends StatelessWidget {
               children: [
                 const CustomFilledButton(label: "Enable Location"),
                 Space.h(8),
-                TextButton(
-                  onPressed: () {},
-                  child: Container(
-                    width: double.infinity,
-                    height: 50,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      border:
-                          Border.all(width: 2, color: Palette.accentTextColor),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Text(
-                      "Use Current Location",
-                      style: TextStyle(
-                        color: Palette.accentTextColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
+                const CustomOutlinedButton(
+                  label: "Use Current Location",
                 ),
               ],
             )

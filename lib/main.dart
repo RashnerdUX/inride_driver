@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           theme: AppTheme.themeData,
           //darkTheme: AppTheme.darkThemeData,
           themeMode: ThemeMode.system,
-          home: const EnableLocationScreen(),
+          home: const GalleryPermissionScreen(),
         ),
       ),
     );
