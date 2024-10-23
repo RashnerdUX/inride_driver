@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
+//This is the screen where the user takes his picture from
 class TakePhotoScreen extends StatelessWidget {
   const TakePhotoScreen({super.key});
 

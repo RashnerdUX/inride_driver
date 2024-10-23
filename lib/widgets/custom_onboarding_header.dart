@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/color_palette.dart';
 
+//This is the header widget used on the signup and signin page
 class CustomOnboardingHeader extends StatelessWidget {
   const CustomOnboardingHeader({
     super.key,

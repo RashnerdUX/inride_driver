@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 
+//This is the screen for getting permission for accessing the Gallery
 class GalleryPermissionScreen extends StatelessWidget {
   const GalleryPermissionScreen({super.key});
 
@@ -66,53 +67,6 @@ class GalleryPermissionScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class SnapshotBottomSheet extends StatelessWidget {
-  const SnapshotBottomSheet({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            "Optimise your photo",
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          Space.h(8),
-          const Text(
-            "Make sure your photo is centered and visible. This will help drivers identify you better",
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          Space.h(8),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              CustomOutlinedButton(
-                label: "Take Another",
-                width: 200,
-              ),
-              CustomFilledButton(
-                label: "Keep",
-                width: 200,
-              ),
-            ],
-          )
-        ],
       ),
     );
   }

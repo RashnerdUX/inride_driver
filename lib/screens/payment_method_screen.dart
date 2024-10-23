@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
+//This is the screen where the user will choose their preferred mode of payment
 class PaymentMethodScreen extends StatelessWidget {
   const PaymentMethodScreen({super.key});
 
@@ -18,7 +19,8 @@ class PaymentMethodScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: 32, right: 32, top: 40, bottom: 24),
+          padding:
+              const EdgeInsets.only(left: 32, right: 32, top: 40, bottom: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -60,8 +62,8 @@ class PaymentMethodScreen extends StatelessWidget {
                     "Digital wallets linked to credit cards, debit cards, or bank accounts.",
               ),
               // Space.h(72),
-              Spacer(),
-              Text(
+              const Spacer(),
+              const Text(
                 "Don't worry, we don't store your payment information",
                 textAlign: TextAlign.center,
                 style: TextStyle(

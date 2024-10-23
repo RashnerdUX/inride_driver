@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 
+//This is the screen where the driver indicates how many passengers their vehicle can carry
 class PassengerChoiceScreen extends StatelessWidget {
   const PassengerChoiceScreen({super.key});
 
@@ -28,7 +29,7 @@ class PassengerChoiceScreen extends StatelessWidget {
       ),
       body: SafeArea(
           child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 32, vertical: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

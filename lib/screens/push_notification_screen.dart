@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 
+//This is the screen that requests for push notification permission
 class PushNotificationScreen extends StatelessWidget {
   const PushNotificationScreen({super.key});
 

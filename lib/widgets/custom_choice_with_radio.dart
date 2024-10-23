@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//This widget displays a list tile with a radio that allows single selection among a list of CustomChoiceWithRadio
 class CustomChoiceWithRadio extends StatelessWidget {
   const CustomChoiceWithRadio({
     super.key,

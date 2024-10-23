@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 
+//This is the screen that the user sees to enable location permission
 class EnableLocationScreen extends StatelessWidget {
   const EnableLocationScreen({super.key});
 
@@ -61,6 +62,5 @@ class EnableLocationScreen extends StatelessWidget {
         ),
       )),
     );
-    ;
   }
 }

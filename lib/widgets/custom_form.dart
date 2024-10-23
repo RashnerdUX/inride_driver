@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
+//This is a form widget for signing into the app
 class CustomSignInForm extends StatelessWidget {
   const CustomSignInForm({
     super.key,

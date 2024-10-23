@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 
+//This is the screen where the user picks their preferred vehcile for providing their service
 class VehicleChoiceScreen extends StatelessWidget {
   const VehicleChoiceScreen({super.key});
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//This is a container that can be used to draw a line
 class CustomLine extends StatelessWidget {
   const CustomLine({
     super.key,

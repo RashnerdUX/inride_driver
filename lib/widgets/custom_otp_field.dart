@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//This widget is the textfield used to enter OTP
 class CustomOtpField extends StatelessWidget {
   const CustomOtpField({
     super.key,

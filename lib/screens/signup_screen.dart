@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/spacer.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 
+//This is the screen where a new user signs up from
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
 
@@ -20,7 +21,7 @@ class SignupScreen extends StatelessWidget {
       body: SafeArea(
           child: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 32),
+          padding: const EdgeInsets.symmetric(horizontal: 32),
           child: Column(
             children: [
               const CustomOnboardingHeader(),

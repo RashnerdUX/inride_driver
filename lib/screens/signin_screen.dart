@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
+//This is the screen where the user logs in from
 class SigninScreen extends StatelessWidget {
   const SigninScreen({super.key});
 

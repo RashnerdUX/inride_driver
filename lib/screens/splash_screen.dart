@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/color_palette.dart';
 
+//This is the sample splash screen that appears when the user opens the app
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 

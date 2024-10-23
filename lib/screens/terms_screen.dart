@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/custom_filled_button.dart';
 
+//This is the screen where the user reads and accepts our terms and conditions
 class TermsScreen extends StatelessWidget {
   const TermsScreen({super.key});
 

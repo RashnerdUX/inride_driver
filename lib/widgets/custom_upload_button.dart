@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:dotted_border/dotted_border.dart';
 
+//This is an upload button with a dotted container
 class CustomUploadButton extends StatelessWidget {
   const CustomUploadButton({
     super.key,

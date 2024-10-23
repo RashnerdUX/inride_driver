@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
+//This widget shows the upload buttons required by the driver to verify his identity
 class CustomDriverSignup extends StatelessWidget {
   const CustomDriverSignup({super.key});
 

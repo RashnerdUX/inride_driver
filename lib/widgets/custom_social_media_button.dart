@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
+//This widget is the button used for social media sign up/signin
 class CustomSocialMediaButton extends StatelessWidget {
   const CustomSocialMediaButton({
     super.key,

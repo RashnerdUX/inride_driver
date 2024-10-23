@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
+//This widget shows the alternate options to sign in or sign up for the app
 class CustomAltSignInOptions extends StatelessWidget {
   const CustomAltSignInOptions({
     super.key,

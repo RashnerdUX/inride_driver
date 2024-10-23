@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 
+//This is the screen where the user will be asked to take a profile picture or set one from gallery
 class SetProfilePictureScreen extends StatelessWidget {
   const SetProfilePictureScreen({super.key});
 
