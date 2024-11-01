@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:inride_driver/screens/passenger_choice_screen.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
+import 'package:go_router/go_router.dart';
 
 //This is the screen where the user picks their preferred vehcile for providing their service
 class VehicleChoiceScreen extends StatelessWidget {
@@ -8,6 +10,8 @@ class VehicleChoiceScreen extends StatelessWidget {
 
   //For sample purposes, this is the overall value for this list of CustomChoiceWithRadio list
   final selectedChoice = 1;
+
+  static String routeName = "VehicleChoiceScreen";
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +64,10 @@ class VehicleChoiceScreen extends StatelessWidget {
               groupValue: selectedChoice,
             ),
             const Spacer(),
-            const CustomFilledButton(label: "Next"),
+            CustomFilledButton(
+                label: "Next",
+                onPressed: () =>
+                    context.goNamed(PassengerChoiceScreen.routeName)),
           ],
         ),
       )),

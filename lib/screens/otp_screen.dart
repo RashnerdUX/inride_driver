@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:inride_driver/main.dart';
+import 'package:inride_driver/screens/screens_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 
 //This is the screen where the user enters their OTP
 class OtpScreen extends StatelessWidget {
   const OtpScreen({super.key});
+
+  static String routeName = "OtpScreen";
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +57,12 @@ class OtpScreen extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-              const CustomFilledButton(label: "Continue")
+              CustomFilledButton(
+                label: "Continue",
+                onPressed: () {
+                  context.goNamed(TermsScreen.routeName);
+                },
+              )
             ],
           ),
         ),

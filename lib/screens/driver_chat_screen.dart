@@ -6,6 +6,8 @@ import 'package:inride_driver/widgets/widgets_barrel.dart';
 class DriverChatScreen extends StatelessWidget {
   const DriverChatScreen({super.key});
 
+  static String routeName = "DriverChatScreen";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

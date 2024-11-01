@@ -1,12 +1,21 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:inride_driver/screens/screens_barrel.dart';
 import 'package:inride_driver/theme/color_palette.dart';
+import 'package:go_router/go_router.dart';
 
 //This is the sample splash screen that appears when the user opens the app
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
+  static String routeName = "SplashScreen";
+
   @override
   Widget build(BuildContext context) {
+    final timer = Timer(
+        Duration(seconds: 2), () => context.goNamed(SignupScreen.routeName));
+
     return Scaffold(
       backgroundColor: Palette.backgroundColor,
       body: Center(

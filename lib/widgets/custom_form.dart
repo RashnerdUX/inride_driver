@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:inride_driver/navigation/nav_router.dart';
+import 'package:inride_driver/screens/screens_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
@@ -40,10 +43,19 @@ class CustomSignInForm extends StatelessWidget {
           ),
         ),
         Space.h(12),
-        const CustomFilledButton(
+        CustomFilledButton(
           label: "Login",
+          onPressed: () {
+            print("Go to SignUp");
+            appRouter.goNamed(SignupScreen.routeName);
+          },
         ),
       ],
     );
   }
+}
+
+void movetoSignUp(BuildContext context) {
+  print("Go to SignUp");
+  context.goNamed(SignupScreen.routeName);
 }

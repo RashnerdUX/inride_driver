@@ -5,6 +5,8 @@ import 'package:inride_driver/theme/theme_barrel.dart';
 class TakePhotoScreen extends StatelessWidget {
   const TakePhotoScreen({super.key});
 
+  static String routeName = "TakePicScreen";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

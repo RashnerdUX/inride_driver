@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:inride_driver/screens/screens_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
+import 'package:go_router/go_router.dart';
 
 //This is the screen where the user will choose their preferred mode of payment
 class PaymentMethodScreen extends StatelessWidget {
   const PaymentMethodScreen({super.key});
+
+  static String routeName = "PaymentSelectionSCreen";
 
   @override
   Widget build(BuildContext context) {
@@ -42,10 +46,11 @@ class PaymentMethodScreen extends StatelessWidget {
                 ),
               ),
               Space.h(24),
-              const CustomChoiceListTile(
+              CustomChoiceListTile(
                 leading: Icons.money_rounded,
                 title: "Cash",
                 subtitle: "Traditional payment method using physical currency.",
+                onTap: () => context.goNamed(VehicleChoiceScreen.routeName),
               ),
               Space.h(16),
               const CustomChoiceListTile(
@@ -86,6 +91,7 @@ class CustomChoiceListTile extends StatelessWidget {
     required this.leading,
     required this.title,
     required this.subtitle,
+    this.onTap,
   });
 
   //This is the leading icon for the tile
@@ -97,6 +103,9 @@ class CustomChoiceListTile extends StatelessWidget {
   //This is the subtitle of the tile
   final String subtitle;
 
+  //This is the function of the listtile
+  final VoidCallback? onTap;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -106,6 +115,7 @@ class CustomChoiceListTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           color: const Color.fromARGB(255, 226, 226, 226)),
       child: ListTile(
+        onTap: onTap,
         leading: Icon(
           leading,
           size: 30,

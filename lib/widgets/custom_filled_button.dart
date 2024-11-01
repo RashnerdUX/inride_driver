@@ -5,17 +5,17 @@ class CustomFilledButton extends StatelessWidget {
   const CustomFilledButton({
     super.key,
     required this.label,
-    this.function,
     this.width,
     this.color,
     this.textColor,
+    this.onPressed,
   });
 
   //The label of the button
   final String label;
 
   //The function of the button
-  final Function? function;
+  final VoidCallback? onPressed;
 
   //This specifies the width of the widget
   final double? width;
@@ -29,7 +29,7 @@ class CustomFilledButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: onPressed,
       child: Container(
         width: width ?? double.infinity,
         height: 50,

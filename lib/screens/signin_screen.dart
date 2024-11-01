@@ -6,6 +6,8 @@ import 'package:inride_driver/theme/theme_barrel.dart';
 class SigninScreen extends StatelessWidget {
   const SigninScreen({super.key});
 
+  static String routeName = "SignInPage";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

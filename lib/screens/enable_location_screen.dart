@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:inride_driver/screens/payment_method_screen.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
+import 'package:go_router/go_router.dart';
 
 //This is the screen that the user sees to enable location permission
 class EnableLocationScreen extends StatelessWidget {
   const EnableLocationScreen({super.key});
+
+  static String routeName = "EnableLocationScreen";
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +55,11 @@ class EnableLocationScreen extends StatelessWidget {
             Space.h(30),
             Column(
               children: [
-                const CustomFilledButton(label: "Enable Location"),
+                CustomFilledButton(
+                  label: "Enable Location",
+                  onPressed: () =>
+                      context.goNamed(PaymentMethodScreen.routeName),
+                ),
                 Space.h(8),
                 const CustomOutlinedButton(
                   label: "Use Current Location",

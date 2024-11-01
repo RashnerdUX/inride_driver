@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:inride_driver/screens/screens_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
+import 'package:go_router/go_router.dart';
 
 //This is the screen where the driver indicates how many passengers their vehicle can carry
 class PassengerChoiceScreen extends StatelessWidget {
@@ -8,6 +10,8 @@ class PassengerChoiceScreen extends StatelessWidget {
 
   //For sample purposes, this will serve as the selection for the choice widgets
   final int selectedChoice = 3;
+
+  static String routeName = "PassengerChoiceScreen";
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +82,9 @@ class PassengerChoiceScreen extends StatelessWidget {
               groupValue: selectedChoice,
             ),
             const Spacer(),
-            const CustomFilledButton(label: "Next"),
+            CustomFilledButton(
+                label: "Next",
+                onPressed: () => context.goNamed(TakePhotoScreen.routeName)),
           ],
         ),
       )),

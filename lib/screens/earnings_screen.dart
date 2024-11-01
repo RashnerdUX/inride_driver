@@ -6,6 +6,8 @@ import 'package:inride_driver/widgets/widgets_barrel.dart';
 class EarningsScreen extends StatelessWidget {
   const EarningsScreen({super.key});
 
+  static String routeName = "EarningsScreen";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

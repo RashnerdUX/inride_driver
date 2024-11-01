@@ -7,6 +7,8 @@ import 'package:inride_driver/functions.dart';
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
+  static String routeName = "ProfileScreen";
+
   final String driverName = "Kelvin Akhigbe";
 
   @override

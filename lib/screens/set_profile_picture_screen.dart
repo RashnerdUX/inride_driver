@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:inride_driver/screens/screens_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
+import 'package:go_router/go_router.dart';
 
 //This is the screen where the user will be asked to take a profile picture or set one from gallery
 class SetProfilePictureScreen extends StatelessWidget {
   const SetProfilePictureScreen({super.key});
+
+  static String routeName = "SetProfilePicScreen";
 
   @override
   Widget build(BuildContext context) {
@@ -77,10 +81,15 @@ class SetProfilePictureScreen extends StatelessWidget {
               Space.h(30),
               Column(
                 children: [
-                  const CustomFilledButton(label: "Take Photo"),
+                  CustomFilledButton(
+                    label: "Take Photo",
+                    onPressed: () => context.goNamed(TakePhotoScreen.routeName),
+                  ),
                   Space.h(8),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.goNamed(GalleryPermissionScreen.routeName);
+                    },
                     child: const Text(
                       "Skip",
                       style: TextStyle(

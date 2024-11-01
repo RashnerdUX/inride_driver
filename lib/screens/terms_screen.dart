@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:inride_driver/screens/enable_location_screen.dart';
+import 'package:inride_driver/screens/push_notification_screen.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/custom_filled_button.dart';
+import 'package:go_router/go_router.dart';
 
 //This is the screen where the user reads and accepts our terms and conditions
 class TermsScreen extends StatelessWidget {
   const TermsScreen({super.key});
 
+  static String routeName = "TermsOfUseScreen";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfff2f6ff),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
@@ -20,8 +26,10 @@ class TermsScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 32, right: 32, top: 24),
+          padding: const EdgeInsets.only(top: 24),
           child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 32, vertical: 40),
+            width: double.infinity,
             height: double.infinity,
             decoration: const BoxDecoration(
               color: Colors.white,
@@ -83,7 +91,12 @@ class TermsScreen extends StatelessWidget {
                   ),
                 ),
                 Space.h(80),
-                const CustomFilledButton(label: "Agree"),
+                CustomFilledButton(
+                  label: "Agree",
+                  onPressed: () {
+                    context.goNamed(PushNotificationScreen.routeName);
+                  },
+                ),
               ],
             ),
           ),

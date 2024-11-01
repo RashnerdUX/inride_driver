@@ -6,6 +6,8 @@ import 'package:inride_driver/widgets/widgets_barrel.dart';
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
+  static String routeName = "HomeScreen";
+
   //For sample purposes, this tells if the driver is offline or online
   final bool isOnline = false;
 

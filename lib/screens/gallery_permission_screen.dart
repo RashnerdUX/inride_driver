@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:inride_driver/screens/home_screen.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
+import 'package:go_router/go_router.dart';
 
 //This is the screen for getting permission for accessing the Gallery
 class GalleryPermissionScreen extends StatelessWidget {
   const GalleryPermissionScreen({super.key});
+
+  static String routeName = "GalleryPermissionScreen";
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +67,10 @@ class GalleryPermissionScreen extends StatelessWidget {
                 ],
               ),
               Space.h(30),
-              const CustomFilledButton(label: "Accept"),
+              CustomFilledButton(
+                label: "Accept",
+                onPressed: () => context.goNamed(HomeScreen.routeName),
+              ),
             ],
           ),
         ),

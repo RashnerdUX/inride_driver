@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:inride_driver/screens/enable_location_screen.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
+import 'package:go_router/go_router.dart';
 
 //This is the screen that requests for push notification permission
 class PushNotificationScreen extends StatelessWidget {
   const PushNotificationScreen({super.key});
+
+  static String routeName = "PushNotificationScreen";
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +56,11 @@ class PushNotificationScreen extends StatelessWidget {
               Space.h(30),
               Column(
                 children: [
-                  const CustomFilledButton(label: "Accept"),
+                  CustomFilledButton(
+                    label: "Accept",
+                    onPressed: () =>
+                        context.goNamed(EnableLocationScreen.routeName),
+                  ),
                   Space.h(8),
                   TextButton(
                     onPressed: () {},
