@@ -10,60 +10,64 @@ class EarningsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<ScaffoldState> earningsScaffoldKey =
+        GlobalKey<ScaffoldState>();
     return Scaffold(
-      appBar: const CustomEarningsHeader(),
-      backgroundColor: const Color(0xffF5F9FF),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 48),
-          child: Column(
-            children: [
-              // Space.h(48),
-              const EarningsTabView(),
-              Space.h(24),
-              Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        "Recent Rides",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "See all",
-                          style: TextStyle(
-                              color: Palette.accentTextColor,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Space.h(8),
-                  Container(
-                    width: double.infinity,
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(12)),
-                    child: const Column(
+        key: earningsScaffoldKey,
+        appBar: CustomEarningsHeader(
+          scaffoldKey: earningsScaffoldKey,
+        ),
+        backgroundColor: const Color(0xffF5F9FF),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 48),
+            child: Column(
+              children: [
+                Space.h(16),
+                const EarningsTabView(),
+                Space.h(24),
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        RideHistoryBlockHeader(),
-                        RideHistoryBlockBody(),
+                        const Text(
+                          "Recent Rides",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text(
+                            "See all",
+                            style: TextStyle(
+                                color: Palette.accentTextColor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
                       ],
                     ),
-                  ),
-                ],
-              ),
-            ],
+                    Space.h(8),
+                    Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: const Column(
+                        children: [
+                          RideHistoryBlockHeader(),
+                          RideHistoryBlockBody(),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:inride_driver/screens/screens_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 
 //This is the screen where the user takes his picture from
@@ -45,17 +47,22 @@ class TakePhotoScreen extends StatelessWidget {
                 children: [
                   const CustomIcon(icon: Icons.image_rounded),
                   Space.w(24),
-                  Container(
-                    width: 92,
-                    height: 92,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Palette.accentTextColor,
-                    ),
-                    child: const Icon(
-                      Icons.camera_alt_rounded,
-                      color: Colors.white,
-                      size: 32,
+                  GestureDetector(
+                    onTap: () {
+                      context.goNamed(GalleryPermissionScreen.routeName);
+                    },
+                    child: Container(
+                      width: 92,
+                      height: 92,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Palette.accentTextColor,
+                      ),
+                      child: const Icon(
+                        Icons.camera_alt_rounded,
+                        color: Colors.white,
+                        size: 32,
+                      ),
                     ),
                   ),
                   Space.w(24),

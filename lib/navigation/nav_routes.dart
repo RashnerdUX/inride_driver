@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:inride_driver/screens/screens_barrel.dart';
 
@@ -6,19 +5,20 @@ List<GoRoute> routes = [
   GoRoute(
     name: SplashScreen.routeName,
     path: "/",
-    redirect: (context, state) {
-      Future.delayed(const Duration(seconds: 2), () {
-        context.goNamed(SigninScreen.routeName);
-      });
-    },
-    pageBuilder: (context, state) {
-      return CustomTransitionPage(
-          child: const SplashScreen(),
-          transitionsBuilder: (context, animation, secondaryAnimation, child) {
-            return FadeTransition(
-                opacity: CurveTween(curve: Curves.easeIn).animate(animation));
-          });
-    },
+    builder: (context, state) => const SplashScreen(),
+    // redirect: (context, state) {
+    //   Future.delayed(const Duration(seconds: 2), () {
+    //     context.goNamed(SigninScreen.routeName);
+    //   });
+    // },
+    // pageBuilder: (context, state) {
+    //   return CustomTransitionPage(
+    //       child: const SplashScreen(),
+    //       transitionsBuilder: (context, animation, secondaryAnimation, child) {
+    //         return FadeTransition(
+    //             opacity: CurveTween(curve: Curves.easeIn).animate(animation));
+    //       });
+    // },
   ),
   GoRoute(
     name: SigninScreen.routeName,
@@ -77,7 +77,7 @@ List<GoRoute> routes = [
   ),
   GoRoute(
     name: GalleryPermissionScreen.routeName,
-    path: "/enable access to your gallery",
+    path: "/enable-access-to-your-gallery",
     builder: (context, state) => const GalleryPermissionScreen(),
   ),
   GoRoute(

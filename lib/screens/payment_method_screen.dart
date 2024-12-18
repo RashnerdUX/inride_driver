@@ -112,8 +112,17 @@ class CustomChoiceListTile extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          color: const Color.fromARGB(255, 226, 226, 226)),
+        borderRadius: BorderRadius.circular(12),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Color(0x331976D2),
+            spreadRadius: 1,
+            blurRadius: 100,
+            offset: Offset(0, 5),
+          )
+        ],
+      ),
       child: ListTile(
         onTap: onTap,
         leading: Icon(

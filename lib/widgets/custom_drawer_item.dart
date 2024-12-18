@@ -1,39 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:inride_driver/constants.dart';
+import 'package:inride_driver/screens/screens_barrel.dart';
+
+class CustomNavDrawerItem extends StatelessWidget {
+  const CustomNavDrawerItem({
+    super.key, required this.item,
+  });
+
+  final NavigationDrawerItem item;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: item.onTap,
+      child: Container(
+        padding: EdgeInsets.only(
+          left: 24,
+          top: 12,
+          bottom: 12,
+        ),
+        child: Row(
+          children: [
+            item.icon,
+            const SizedBox(width: 20),
+            Text(item.text, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black),),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 
 class NavigationDrawerItem {
   String text;
   Icon icon;
-  VoidCallback onTap;
+  Function() onTap;
 
   NavigationDrawerItem({
     required this.text,
     required this.icon,
     required this.onTap,
   });
-
-  static List<Widget> drawerItems() {
-    List<Widget> tempdrawerItems = [];
-    for (NavigationDrawerItem item in destinations) {
-      Widget newItem = Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-        child: ListTile(
-          leading: item.icon,
-          title: Text(
-            item.text,
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          onTap: item.onTap,
-        ),
-      );
-      tempdrawerItems.add(newItem);
-    }
-    print("$tempdrawerItems");
-    return tempdrawerItems;
-  }
 }
 
 List destinations = [
@@ -44,7 +53,9 @@ List destinations = [
         size: 24,
         color: Colors.black,
       ),
-      onTap: () {}),
+      onTap: () {
+        kGlobalNavKey.currentContext?.goNamed(HomeScreen.routeName);
+      }),
   NavigationDrawerItem(
       text: "Earnings",
       icon: const Icon(
@@ -52,7 +63,9 @@ List destinations = [
         size: 24,
         color: Colors.black,
       ),
-      onTap: () {}),
+      onTap: () {
+        kGlobalNavKey.currentContext?.goNamed(EarningsScreen.routeName);
+      }),
   NavigationDrawerItem(
       text: "Inbox",
       icon: const Icon(
@@ -60,7 +73,9 @@ List destinations = [
         size: 24,
         color: Colors.black,
       ),
-      onTap: () {}),
+      onTap: () {
+        kGlobalNavKey.currentContext?.goNamed(DriverChatScreen.routeName);
+      }),
   NavigationDrawerItem(
       text: "Account settings",
       icon: const Icon(

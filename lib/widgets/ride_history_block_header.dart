@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:inride_driver/theme/theme_barrel.dart';
-import 'package:inride_driver/widgets/widgets_barrel.dart';
 
 //This is the light blue header widget for the history block
 class RideHistoryBlockHeader extends StatelessWidget {
@@ -20,12 +18,12 @@ class RideHistoryBlockHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.all(20),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.all(20),
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
         color: Color(0xffdce8ff),
       ),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(

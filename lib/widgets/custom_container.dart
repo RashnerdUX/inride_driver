@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
-import 'package:inride_driver/widgets/widgets_barrel.dart';
 
 //Tbh, I don't remember why I created this but I'll test it later
 //Just did, I used it to display a block of text in a rounded container on the Earnings page/screen

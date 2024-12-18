@@ -9,7 +9,7 @@ class RPSCustomPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // Layer 2
 
-    Paint paint_fill_0 = Paint()
+    Paint paintFill0 = Paint()
       ..color = const Color.fromARGB(255, 255, 255, 255)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
@@ -32,22 +32,22 @@ class RPSCustomPainter extends CustomPainter {
         size.width * -0.0003500, size.height * 0.0616000);
     path_0.close();
 
-    canvas.drawPath(path_0, paint_fill_0);
+    canvas.drawPath(path_0, paintFill0);
 
     // Layer 2
 
-    Paint paint_stroke_0 = Paint()
+    Paint paintStroke0 = Paint()
       ..color = const Color.fromARGB(255, 255, 255, 255)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.round
       ..strokeJoin = StrokeJoin.round;
 
-    canvas.drawPath(path_0, paint_stroke_0);
+    canvas.drawPath(path_0, paintStroke0);
 
     // Layer 1
 
-    Paint paint_fill_1 = Paint()
+    Paint paintFill1 = Paint()
       ..color = const Color.fromARGB(255, 255, 255, 255)
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
@@ -86,18 +86,18 @@ class RPSCustomPainter extends CustomPainter {
         size.height * 0.1600000);
     path_1.close();
 
-    canvas.drawPath(path_1, paint_fill_1);
+    canvas.drawPath(path_1, paintFill1);
 
     // Layer 1
 
-    Paint paint_stroke_1 = Paint()
+    Paint paintStroke1 = Paint()
       ..color = const Color.fromARGB(255, 255, 255, 255)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.round
       ..strokeJoin = StrokeJoin.round;
 
-    canvas.drawPath(path_1, paint_stroke_1);
+    canvas.drawPath(path_1, paintStroke1);
   }
 
   @override

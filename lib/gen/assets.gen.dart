@@ -20,12 +20,19 @@ class $AssetsImagesGen {
   AssetGenImage get flutterLogo =>
       const AssetGenImage('assets/images/flutter_logo.png');
 
+  /// File path: assets/images/gallery.png
+  AssetGenImage get gallery => const AssetGenImage('assets/images/gallery.png');
+
   /// File path: assets/images/google.png
   AssetGenImage get google => const AssetGenImage('assets/images/google.png');
 
   /// File path: assets/images/location.png
   AssetGenImage get location =>
       const AssetGenImage('assets/images/location.png');
+
+  /// File path: assets/images/profile_pic.png
+  AssetGenImage get profilePic =>
+      const AssetGenImage('assets/images/profile_pic.png');
 
   /// File path: assets/images/push_notification.png
   AssetGenImage get pushNotification =>
@@ -35,8 +42,16 @@ class $AssetsImagesGen {
   AssetGenImage get twitter => const AssetGenImage('assets/images/twitter.png');
 
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [facebook, flutterLogo, google, location, pushNotification, twitter];
+  List<AssetGenImage> get values => [
+        facebook,
+        flutterLogo,
+        gallery,
+        google,
+        location,
+        profilePic,
+        pushNotification,
+        twitter
+      ];
 }
 
 class $AssetsSvgsGen {

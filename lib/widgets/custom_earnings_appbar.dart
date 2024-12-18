@@ -7,7 +7,10 @@ class CustomEarningsHeader extends StatelessWidget
     implements PreferredSizeWidget {
   const CustomEarningsHeader({
     super.key,
+    required this.scaffoldKey,
   });
+
+  final GlobalKey<ScaffoldState> scaffoldKey;
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,7 @@ class CustomEarningsHeader extends StatelessWidget
                       color: const Color(0xff519cff),
                       onTap: () {
                         Scaffold.of(context).openDrawer();
+                        print("Earnings Drawer icon clicked");
                       },
                       body: const Icon(
                         Icons.menu_rounded,

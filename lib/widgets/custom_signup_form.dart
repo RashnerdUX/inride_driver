@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:inride_driver/main.dart';
 import 'package:inride_driver/screens/otp_screen.dart';
 import 'package:inride_driver/widgets/widgets_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';

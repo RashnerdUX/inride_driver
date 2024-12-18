@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:inride_driver/navigation/nav_barrel.dart';
 import 'package:inride_driver/theme/theme_barrel.dart';
 import 'package:inride_driver/models/models_barrel.dart';
-import 'screens/screens_barrel.dart';
+import 'features/features_barrel.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+
+  PermissionService().requestPermissions;
+
+  runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
-  final GoRouter _router = GoRouter(routes: routes, initialLocation: "/");
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return ListenableBuilder(
       listenable: SettingsModel(),
       builder: (context, child) => ScreenUtilInit(
